@@ -14,7 +14,7 @@ Alternatively you can `@import` the `build.zig` file and run the `addIridium()` 
 - [x] GLFW
 - [x] GLAD
 - [x] Dear ImGui
-- [ ] Assets (stb libraries)
+- [x] Assets (stb libraries)
 - [ ] Audio (OpenAL..?)
 
 ## Features
