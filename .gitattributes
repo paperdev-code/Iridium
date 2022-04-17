@@ -1,3 +1,6 @@
-lib/cimgui/src -linguist-detectable
-lib/glad/src -linguist-detectable
-lib/glfw/src -linguist-detectable
+lib/cimgui/src/** linguist-vendored
+lib/glad/src/** linguist-vendored
+lib/glfw/src/** linguist-vendored
+lib/cimgui/include/** linguist-vendored
+lib/glad/include/** linguist-vendored
+lib/glfw/include/** linguist-vendored
