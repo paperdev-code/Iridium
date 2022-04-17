@@ -22,6 +22,10 @@ fn addLibs(b : *std.build.Builder, exe : *std.build.LibExeObjStep, target : std.
     const cimgui = @import("lib/cimgui/libbuild.zig");
     exe.linkLibrary(cimgui.build(b, target));
     exe.addIncludeDir(path ++ "lib/cimgui/include");
+
+    const stb = @import("lib/stb/libbuild.zig");
+    exe.linkLibrary(stb.build(b, target));
+    exe.addIncludeDir(path ++ "lib/stb/include");
 }
 
 pub fn addIridium(b : *std.build.Builder, exe : *std.build.LibExeObjStep, target : std.zig.CrossTarget) void {
@@ -100,8 +104,9 @@ fn copyResourcesToBuild(b : *std.build.Builder) !void {
     while (resources.next() catch return error.WalkError) |resource| {
         if (resource.kind == .File) {
             std.log.debug("Copying {s}", .{resource.path});
-            var resource_dir_path = std.fs.path.dirname(resource.path).?;
-            install_dir.makePath(resource_dir_path) catch return error.PathMirrorFail;
+            if (std.fs.path.dirname(resource.path)) |dir| {
+                install_dir.makePath(dir) catch return error.PathMirrorFail;
+            }
             std.fs.Dir.copyFile(resources_dir, resource.path, install_dir, resource.path, .{}) catch return error.CopyFail;
         }
     }

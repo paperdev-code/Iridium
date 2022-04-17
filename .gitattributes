@@ -5,6 +5,7 @@ lib/GLFW/src/** -linguist-detectable
 lib/cimgui/include/** -linguist-detectable
 lib/glad/include/** -linguist-detectable
 lib/GLFW/include/** -linguist-detectable
+lib/std/include** -linguist-detectable
 src/** linguist-detectable
 res/** linguist-detectable
 app/** linguist-detectable

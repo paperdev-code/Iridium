@@ -5,4 +5,5 @@ usingnamespace @cImport({
     @cInclude("cimgui.h");
     @cInclude("backend/imgui_impl_glfw.h");
     @cInclude("backend/imgui_impl_opengl3.h");
+    @cInclude("stb_image.h");
 });
