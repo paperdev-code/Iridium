@@ -9,8 +9,8 @@ lib/glad/include/** -linguist-detectable
 lib/GLFW/src/** -linguist-detectable
 lib/GLFW/include/** -linguist-detectable
 
-lib/std/include/** -linguist-detectable
-lib/std/src/** -linguist-detectable
+lib/stb/include/** -linguist-detectable
+lib/stb/src/** -linguist-detectable
 
 src/** linguist-detectable
 res/** linguist-detectable
