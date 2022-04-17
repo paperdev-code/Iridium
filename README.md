@@ -30,5 +30,7 @@ Currently supports `linux`, must have `x11` and `gl` development packages instal
 ## Compilation
 To view the whole build process, read through the `build.zig` and `libbuild.zig` files in `lib`. Currently only Linux is supported. But care is taken to make it possible to compile on *at least* Windows in the future with minimal system dependencies. I just don't feel like setting that up at the moment.
 
+Build system inspired by [JonSnowbd](https://github.com/JonSnowbd)'s [ZT](https://github.com/JonSnowbd/ZT) library.
+
 ##### Won't compile?
 ###### uhh, send log..?
