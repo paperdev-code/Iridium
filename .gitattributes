@@ -1,0 +1,3 @@
+lib/cimgui/src -linguist-detectable
+lib/glad/src -linguist-detectable
+lib/glfw/src -linguist-detectable
