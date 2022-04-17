@@ -21,8 +21,7 @@ fn addLibs(b : *std.build.Builder, exe : *std.build.LibExeObjStep, target : std.
 
     const cimgui = @import("lib/cimgui/libbuild.zig");
     exe.linkLibrary(cimgui.build(b, target));
-    exe.addIncludeDir(path ++ "lib/cimgui");
-    exe.addIncludeDir(path ++ "lib/cimgui/backend");
+    exe.addIncludeDir(path ++ "lib/cimgui/include");
 }
 
 pub fn addIridium(b : *std.build.Builder, exe : *std.build.LibExeObjStep, target : std.zig.CrossTarget) void {
